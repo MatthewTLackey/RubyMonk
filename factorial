@@ -1,0 +1,14 @@
+def factorial(a_number)
+  counter = a_number-1
+  
+  factorialed = a_number
+  until counter == 0
+  	factorialed *= counter
+  	counter -= 1
+  	
+  end
+  puts factorialed
+return factorialed
+end
+
+factorial(5)

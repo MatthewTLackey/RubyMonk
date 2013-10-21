@@ -1,0 +1,39 @@
+
+def number_shuffle(number)
+  # your code here
+  number_array = number.to_s.split('')
+
+
+
+	factorial_counter = number_array.length-1
+  
+  factorialed = number_array.length
+  until factorial_counter == 0
+  	factorialed *= factorial_counter
+  	factorial_counter -= 1
+  	
+  end
+  puts factorialed
+
+  
+  
+  final_numbers = [number]
+
+  until final_numbers.length == factorialed do
+    final_numbers << number_array.shuffle!.join('').to_i
+    final_numbers.uniq!
+    
+  end
+
+
+  final_numbers.sort!
+  return final_numbers
+end
+
+puts number_shuffle(123)
+
+
+
+
+
+
